@@ -3,6 +3,6 @@ module.exports = {
   globalTeardown: './jest_config/teardown.js',
   testEnvironment: './jest_config/puppeteer_environment.js',
   testResultsProcessor: "./node_modules/jest-html-reporter",
-  testPathIgnorePatterns: ["qahub"],
+  testPathIgnorePatterns: ["deprecated"],
   verbose: true,
 }

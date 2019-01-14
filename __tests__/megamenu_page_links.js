@@ -1,10 +1,11 @@
 // check hrefs are working - set for live_homepage
 let page;
+jest.setTimeout(15000)
 
 beforeAll(async () => {
 	page = await global.__BROWSER__.newPage();
 	await page.setViewport({width: 1920, height: 1080});
-	await page.goto(process.env.live_homepage);
+	await page.goto('https://www.nhm.ac.uk');
 	// await page.goto(process.env.local_AEM_login);
 	// await page.type('#username', process.env.aem_username);
 	// await page.type('#password', process.env.aem_password);
@@ -17,7 +18,7 @@ afterAll(async () => {
 
 describe( 'Megamenu page links', () => {
 	test('visit option goes to /visit.html', async () => {
-		await page.goto(process.env.live_homepage, {
+		await page.goto('https://www.nhm.ac.uk', {
 		// await page.goto(process.env.local_AEM_homepage, {
 			waitUntil: 'domcontentloaded'
 		});
@@ -27,7 +28,7 @@ describe( 'Megamenu page links', () => {
 	});
 
 	test('discover option goes to /discover.html', async () => {
-		await page.goto(process.env.live_homepage, {
+		await page.goto('https://www.nhm.ac.uk', {
 		// await page.goto(process.env.local_AEM_homepage, {
 			waitUntil: 'domcontentloaded'
 		});
@@ -37,7 +38,7 @@ describe( 'Megamenu page links', () => {
 	})
 
 	test('take part option goes to /take-part.html', async () => {
-		await page.goto(process.env.live_homepage, {
+		await page.goto('https://www.nhm.ac.uk', {
 		// await page.goto(process.env.local_AEM_homepage, {
 			waitUntil: 'domcontentloaded'
 		});
@@ -47,7 +48,7 @@ describe( 'Megamenu page links', () => {
 	})
 
 	test('join and Support option goes to /support-us.html', async () => {
-		await page.goto(process.env.live_homepage, {
+		await page.goto('https://www.nhm.ac.uk', {
 		// await page.goto(process.env.local_AEM_homepage, {
 			waitUntil: 'domcontentloaded'
 		});
@@ -57,7 +58,7 @@ describe( 'Megamenu page links', () => {
 	})
 
 	test('schools option goes to /schools.html', async () => {
-		await page.goto(process.env.live_homepage, {
+		await page.goto('https://www.nhm.ac.uk', {
 		// await page.goto(process.env.local_AEM_homepage, {
 			waitUntil: 'domcontentloaded'
 		});
@@ -67,7 +68,7 @@ describe( 'Megamenu page links', () => {
 	})
 
 	test('our science option goes to /our-science.html', async () => {
-		await page.goto(process.env.live_homepage, {
+		await page.goto('https://www.nhm.ac.uk', {
 		// await page.goto(process.env.local_AEM_homepage, {
 			waitUntil: 'domcontentloaded'
 		});
@@ -77,7 +78,7 @@ describe( 'Megamenu page links', () => {
 	})
 
 	test('shop option goes to https://www.nhmshop.co.uk', async () => {
-		await page.goto(process.env.live_homepage, {
+		await page.goto('https://www.nhm.ac.uk', {
 		// await page.goto(process.env.local_AEM_homepage, {
 			waitUntil: 'domcontentloaded'
 		});

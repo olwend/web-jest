@@ -21,7 +21,7 @@ describe( 'Megamenu info links', () => {
 			clickTarget = '.global-header--info > li:first-child > a',
 			text = 'Getting here';
 		// await page.goto(process.env.local_AEM_homepage, {
-		await page.goto(process.env.live_homepage, {
+		await page.goto('https://www.nhm.ac.uk', {
 			waitUntil: 'domcontentloaded'
 		});
 		await page.click(clickTarget);
@@ -36,7 +36,7 @@ describe( 'Megamenu info links', () => {
 			clickTarget = '.global-header--info > li:last-child > a',
 			text = 'Membership';
 		// await page.goto(process.env.local_AEM_homepage, {
-		await page.goto(process.env.live_homepage, {
+		await page.goto('https://www.nhm.ac.uk', {
 			waitUntil: 'domcontentloaded'
 		});
 		await page.click(clickTarget);

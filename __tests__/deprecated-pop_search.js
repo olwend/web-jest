@@ -22,9 +22,8 @@ describe(
       await page.waitFor(10000)
       await page.screenshot({path: './screenshot/pop3.png'})
       let url = await page.url()
-          expect(url).toMatch(/visit.html/)await page.waitFor(4000)
-          let url = await page.url()
-              expect(url).toMatch(/discover/space.html)
+              expect(url).toMatch(/dinosaurs.html/)
+              await page.waitFor(4000)
     })
   },
   timeout
